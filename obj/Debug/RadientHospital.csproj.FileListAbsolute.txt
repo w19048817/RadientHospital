@@ -1,0 +1,5 @@
+E:\netprojects\RadientHospital\obj\Debug\RadientHospital.csprojAssemblyReference.cache
+E:\netprojects\RadientHospital\obj\Debug\RadientHospital.Properties.Resources.resources
+E:\netprojects\RadientHospital\obj\Debug\RadientHospital.Views.Form1.resources
+E:\netprojects\RadientHospital\obj\Debug\RadientHospital.csproj.GenerateResource.cache
+E:\netprojects\RadientHospital\obj\Debug\RadientHospital.csproj.CoreCompileInputs.cache
