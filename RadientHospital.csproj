@@ -45,6 +45,8 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -56,16 +58,56 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\Class1.cs" />
-    <Compile Include="Presenter\Class1.cs" />
+    <Compile Include="HospitalModel.cs" />
+    <Compile Include="Migrations\202012191150033_first.cs" />
+    <Compile Include="Migrations\202012191150033_first.designer.cs">
+      <DependentUpon>202012191150033_first.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Patient.cs" />
+    <Compile Include="Models\PatientDbAccess.cs" />
+    <Compile Include="Presenter\PatientRegisterPresenter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Views\Form1.cs">
+    <Compile Include="Views\AddAppoinntmentForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Views\AddAppoinntmentForm.Designer.cs">
+      <DependentUpon>AddAppoinntmentForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\IRegisterPatient.cs" />
+    <Compile Include="Views\ParientRegisterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ParientRegisterForm.Designer.cs">
+      <DependentUpon>ParientRegisterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PatientGridView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\PatientGridView.Designer.cs">
+      <DependentUpon>PatientGridView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Receptionist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Receptionist.Designer.cs">
+      <DependentUpon>Receptionist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\mainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\mainForm.Designer.cs">
+      <DependentUpon>mainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_RadientHospital_HospitalModelDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_RadientHospital_HospitalModelDataSet.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Migrations\202012191150033_first.resx">
+      <DependentUpon>202012191150033_first.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -75,8 +117,20 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Views\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Views\AddAppoinntmentForm.resx">
+      <DependentUpon>AddAppoinntmentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ParientRegisterForm.resx">
+      <DependentUpon>ParientRegisterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\PatientGridView.resx">
+      <DependentUpon>PatientGridView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Receptionist.resx">
+      <DependentUpon>Receptionist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\mainForm.resx">
+      <DependentUpon>mainForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -88,6 +142,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="_RadientHospital_HospitalModelDataSet.xsc">
+      <DependentUpon>_RadientHospital_HospitalModelDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="_RadientHospital_HospitalModelDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_RadientHospital_HospitalModelDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_RadientHospital_HospitalModelDataSet.xss">
+      <DependentUpon>_RadientHospital_HospitalModelDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
