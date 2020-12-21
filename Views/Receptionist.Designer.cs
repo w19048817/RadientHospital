@@ -60,7 +60,7 @@
             this.Controls.Add(this.newpatientsgridbtn);
             this.Controls.Add(this.regiterpatientbtn);
             this.Name = "Receptionist";
-            this.Text = "Form1";
+            this.Text = "Receptionist";
             this.ResumeLayout(false);
 
         }

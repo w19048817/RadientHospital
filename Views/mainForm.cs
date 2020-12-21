@@ -21,6 +21,7 @@ namespace RadientHospital.Views
         {
             Receptionist rep = new Receptionist();
             rep.Show();
+            Visible = false;
         }
     }
 }

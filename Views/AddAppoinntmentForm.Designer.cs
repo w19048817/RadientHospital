@@ -28,24 +28,75 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label_patientid = new System.Windows.Forms.Label();
+            this.label_app_patientid = new System.Windows.Forms.Label();
+            this.label_app_patientname = new System.Windows.Forms.Label();
+            this.label_app_date = new System.Windows.Forms.Label();
+            this.text_app_patient_id = new System.Windows.Forms.TextBox();
+            this.text_app_patient_name = new System.Windows.Forms.TextBox();
+            this.text_patient_appt_date = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
-            // label_patientid
+            // label_app_patientid
             // 
-            this.label_patientid.AutoSize = true;
-            this.label_patientid.Location = new System.Drawing.Point(276, 70);
-            this.label_patientid.Name = "label_patientid";
-            this.label_patientid.Size = new System.Drawing.Size(35, 13);
-            this.label_patientid.TabIndex = 0;
-            this.label_patientid.Text = "label1";
+            this.label_app_patientid.AutoSize = true;
+            this.label_app_patientid.Location = new System.Drawing.Point(194, 87);
+            this.label_app_patientid.Name = "label_app_patientid";
+            this.label_app_patientid.Size = new System.Drawing.Size(54, 13);
+            this.label_app_patientid.TabIndex = 0;
+            this.label_app_patientid.Text = "Patient ID";
+            // 
+            // label_app_patientname
+            // 
+            this.label_app_patientname.AutoSize = true;
+            this.label_app_patientname.Location = new System.Drawing.Point(194, 122);
+            this.label_app_patientname.Name = "label_app_patientname";
+            this.label_app_patientname.Size = new System.Drawing.Size(71, 13);
+            this.label_app_patientname.TabIndex = 1;
+            this.label_app_patientname.Text = "Patient Name";
+            // 
+            // label_app_date
+            // 
+            this.label_app_date.AutoSize = true;
+            this.label_app_date.Location = new System.Drawing.Point(194, 156);
+            this.label_app_date.Name = "label_app_date";
+            this.label_app_date.Size = new System.Drawing.Size(92, 13);
+            this.label_app_date.TabIndex = 2;
+            this.label_app_date.Text = "Appointment Date";
+            // 
+            // text_app_patient_id
+            // 
+            this.text_app_patient_id.Location = new System.Drawing.Point(294, 84);
+            this.text_app_patient_id.Name = "text_app_patient_id";
+            this.text_app_patient_id.ReadOnly = true;
+            this.text_app_patient_id.Size = new System.Drawing.Size(100, 20);
+            this.text_app_patient_id.TabIndex = 3;
+            // 
+            // text_app_patient_name
+            // 
+            this.text_app_patient_name.Location = new System.Drawing.Point(294, 122);
+            this.text_app_patient_name.Name = "text_app_patient_name";
+            this.text_app_patient_name.ReadOnly = true;
+            this.text_app_patient_name.Size = new System.Drawing.Size(100, 20);
+            this.text_app_patient_name.TabIndex = 4;
+            // 
+            // text_patient_appt_date
+            // 
+            this.text_patient_appt_date.Location = new System.Drawing.Point(294, 156);
+            this.text_patient_appt_date.Name = "text_patient_appt_date";
+            this.text_patient_appt_date.Size = new System.Drawing.Size(200, 20);
+            this.text_patient_appt_date.TabIndex = 5;
             // 
             // AddAppoinntmentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label_patientid);
+            this.Controls.Add(this.text_patient_appt_date);
+            this.Controls.Add(this.text_app_patient_name);
+            this.Controls.Add(this.text_app_patient_id);
+            this.Controls.Add(this.label_app_date);
+            this.Controls.Add(this.label_app_patientname);
+            this.Controls.Add(this.label_app_patientid);
             this.Name = "AddAppoinntmentForm";
             this.Text = "AddAppoinntmentForm";
             this.ResumeLayout(false);
@@ -55,6 +106,11 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label_patientid;
+        private System.Windows.Forms.Label label_app_patientid;
+        private System.Windows.Forms.Label label_app_patientname;
+        private System.Windows.Forms.Label label_app_date;
+        private System.Windows.Forms.TextBox text_app_patient_id;
+        private System.Windows.Forms.TextBox text_app_patient_name;
+        private System.Windows.Forms.DateTimePicker text_patient_appt_date;
     }
 }

@@ -20,9 +20,10 @@ namespace RadientHospital.Views
         public string patientname { get; set; }
 
         //private void Form2_Load(object sender, EventArgs e)
-        public void sai()
+        public void addAppointment()
         {
-            label_patientid.Text = patientid.ToString();
+            text_app_patient_id.Text = patientid.ToString();
+            text_app_patient_name.Text = patientname.ToString();
         }
     }
 }

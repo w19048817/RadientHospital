@@ -126,6 +126,7 @@ namespace RadientHospital.Views
             PatientRegisterPresenter prp = new PatientRegisterPresenter(this);
             prp.addPatient();
             MessageBox.Show("inserted sucessfully");
+            Visible = false;
         }
     }
 }

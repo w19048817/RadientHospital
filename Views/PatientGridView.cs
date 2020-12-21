@@ -7,11 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using RadientHospital.Presenter;
+using System.IO;
 namespace RadientHospital.Views
 {
     public partial class PatientGridView : Form
     {
+        private object openFileDialog1;
+
         public PatientGridView()
         {
             InitializeComponent();
@@ -31,21 +34,44 @@ namespace RadientHospital.Views
                 editbutton.HeaderText = "Edit";
                 editbutton.Name = "Edit";
                 editbutton.UseColumnTextForButtonValue = true;
-                editbutton.Text = "edit";
-                editbutton.Width = 60;
+                editbutton.Text = "Add Appointment";
+                editbutton.Width = 100;
                 dataGridView1.Columns.Add(editbutton);
+
+                DataGridViewButtonColumn consentform = new DataGridViewButtonColumn();
+                consentform.FlatStyle = FlatStyle.Popup;
+                consentform.HeaderText = "Edit";
+                consentform.Name = "Edit";
+                consentform.UseColumnTextForButtonValue = true;
+                consentform.Text = "Upload consent";
+                consentform.Width = 100;
+                dataGridView1.Columns.Add(consentform);
             }
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == 5)
+           if (e.ColumnIndex == 5)
             {
                 AddAppoinntmentForm aaf = new AddAppoinntmentForm();
                 aaf.patientid = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
                 aaf.patientname = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
-                aaf.sai();
+                aaf.addAppointment();
                 aaf.Show();
+            }
+            else if (e.ColumnIndex == 6)
+            {
+                PatientConsentPresenter pcp = new PatientConsentPresenter();
+                DialogResult result = openFileDialog2.ShowDialog();
+                if (result == DialogResult.OK)
+                {
+                    string file = openFileDialog2.FileName;
+                    pcp.file = file;
+                    pcp.patientid = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
+                    pcp.patientname = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+                    pcp.addConsent(file);
+                }
+                
             }
         }
     }

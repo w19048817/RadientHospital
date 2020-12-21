@@ -30,17 +30,18 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this._RadientHospital_HospitalModelDataSet = new RadientHospital._RadientHospital_HospitalModelDataSet();
             this.patientsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this._RadientHospital_HospitalModelDataSet = new RadientHospital._RadientHospital_HospitalModelDataSet();
             this.patientsTableAdapter = new RadientHospital._RadientHospital_HospitalModelDataSetTableAdapters.PatientsTableAdapter();
             this.patiendIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.patientNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.patientDoBDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.genderDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.openFileDialog2 = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this._RadientHospital_HospitalModelDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.patientsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._RadientHospital_HospitalModelDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -54,21 +55,21 @@
             this.genderDataGridViewTextBoxColumn,
             this.emailDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.patientsBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(126, 58);
+            this.dataGridView1.Location = new System.Drawing.Point(45, 68);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(562, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(705, 119);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
-            // 
-            // _RadientHospital_HospitalModelDataSet
-            // 
-            this._RadientHospital_HospitalModelDataSet.DataSetName = "_RadientHospital_HospitalModelDataSet";
-            this._RadientHospital_HospitalModelDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // patientsBindingSource
             // 
             this.patientsBindingSource.DataMember = "Patients";
             this.patientsBindingSource.DataSource = this._RadientHospital_HospitalModelDataSet;
+            // 
+            // _RadientHospital_HospitalModelDataSet
+            // 
+            this._RadientHospital_HospitalModelDataSet.DataSetName = "_RadientHospital_HospitalModelDataSet";
+            this._RadientHospital_HospitalModelDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // patientsTableAdapter
             // 
@@ -80,6 +81,7 @@
             this.patiendIDDataGridViewTextBoxColumn.HeaderText = "patiendID";
             this.patiendIDDataGridViewTextBoxColumn.Name = "patiendIDDataGridViewTextBoxColumn";
             this.patiendIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.patiendIDDataGridViewTextBoxColumn.Visible = false;
             // 
             // patientNameDataGridViewTextBoxColumn
             // 
@@ -105,6 +107,10 @@
             this.emailDataGridViewTextBoxColumn.HeaderText = "email";
             this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
             // 
+            // openFileDialog2
+            // 
+            this.openFileDialog2.FileName = "openFileDialog2";
+            // 
             // PatientGridView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -115,8 +121,8 @@
             this.Text = "PatientGridView";
             this.Load += new System.EventHandler(this.PatientGridView_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._RadientHospital_HospitalModelDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.patientsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._RadientHospital_HospitalModelDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -132,5 +138,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn patientDoBDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn genderDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
+        private System.Windows.Forms.OpenFileDialog openFileDialog2;
     }
 }
