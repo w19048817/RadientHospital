@@ -17,3 +17,4 @@ E:\netprojects\RadientHospital\obj\Debug\RadientHospital.Views.ParientRegisterFo
 E:\netprojects\RadientHospital\obj\Debug\RadientHospital.Migrations.first.resources
 E:\netprojects\RadientHospital\obj\Debug\RadientHospital.Views.PatientGridView.resources
 E:\netprojects\RadientHospital\obj\Debug\RadientHospital.Views.AddAppoinntmentForm.resources
+E:\netprojects\RadientHospital\obj\Debug\RadientHospital.csprojAssemblyReference.cache

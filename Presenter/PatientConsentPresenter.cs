@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using RadientHospital.Models;
 
 namespace RadientHospital.Presenter
 {
@@ -15,12 +16,14 @@ namespace RadientHospital.Presenter
 
         public void addConsent(string file)
         {
-            //Console.WriteLine(file);
              string[] f = file.Split('\\');
              string filename = f[(f.Length) - 1];
-             string dest = @"E:\netprojects\RadientHospital\images\";
+             string dest = @"E:\netprojects\RadientHospital\ConcentForms\" + filename;
              File.Copy(file, dest, true);
-            Console.WriteLine(filename);
+
+            PatientDbAccess pda = new PatientDbAccess();
+            pda.addConsentForm();
+            //Console.WriteLine(filename);
 
         }
     }

@@ -16,5 +16,14 @@ namespace RadientHospital.Models
                 db.SaveChanges();
             }
         }
+
+        public void addConsentForm()
+        {
+            using (var db = new HospitalModel())
+            {
+                
+            }
+        }
+
     }
 }
