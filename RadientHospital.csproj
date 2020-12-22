@@ -76,7 +76,14 @@
     <Compile Include="Views\AddAppoinntmentForm.Designer.cs">
       <DependentUpon>AddAppoinntmentForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\IPatientAppointment.cs" />
     <Compile Include="Views\IRegisterPatient.cs" />
+    <Compile Include="Views\MedicalQuestionersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MedicalQuestionersForm.Designer.cs">
+      <DependentUpon>MedicalQuestionersForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\ParientRegisterForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +127,9 @@
     </Compile>
     <EmbeddedResource Include="Views\AddAppoinntmentForm.resx">
       <DependentUpon>AddAppoinntmentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MedicalQuestionersForm.resx">
+      <DependentUpon>MedicalQuestionersForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\ParientRegisterForm.resx">
       <DependentUpon>ParientRegisterForm.cs</DependentUpon>

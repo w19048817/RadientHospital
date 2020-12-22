@@ -30,6 +30,7 @@
         {
             this.regiterpatientbtn = new System.Windows.Forms.Button();
             this.newpatientsgridbtn = new System.Windows.Forms.Button();
+            this.exesting_patients_btn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // regiterpatientbtn
@@ -52,11 +53,21 @@
             this.newpatientsgridbtn.UseVisualStyleBackColor = true;
             this.newpatientsgridbtn.Click += new System.EventHandler(this.newpatientsgridbtn_Click);
             // 
+            // exesting_patients_btn
+            // 
+            this.exesting_patients_btn.Location = new System.Drawing.Point(300, 175);
+            this.exesting_patients_btn.Name = "exesting_patients_btn";
+            this.exesting_patients_btn.Size = new System.Drawing.Size(119, 36);
+            this.exesting_patients_btn.TabIndex = 2;
+            this.exesting_patients_btn.Text = "Existing Patients";
+            this.exesting_patients_btn.UseVisualStyleBackColor = true;
+            // 
             // Receptionist
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.exesting_patients_btn);
             this.Controls.Add(this.newpatientsgridbtn);
             this.Controls.Add(this.regiterpatientbtn);
             this.Name = "Receptionist";
@@ -69,5 +80,6 @@
 
         private System.Windows.Forms.Button regiterpatientbtn;
         private System.Windows.Forms.Button newpatientsgridbtn;
+        private System.Windows.Forms.Button exesting_patients_btn;
     }
 }

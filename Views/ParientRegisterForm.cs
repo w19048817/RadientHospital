@@ -124,9 +124,10 @@ namespace RadientHospital.Views
         private void registerPatientbtn_Click(object sender, EventArgs e)
         {
             PatientRegisterPresenter prp = new PatientRegisterPresenter(this);
+            //MedicalQuestionersForm mcf = new MedicalQuestionersForm();
             prp.addPatient();
             MessageBox.Show("inserted sucessfully");
-            Visible = false;
+            //Visible = false;
         }
     }
 }

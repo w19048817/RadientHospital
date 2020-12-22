@@ -17,12 +17,19 @@ namespace RadientHospital.Models
             }
         }
 
-        public void addConsentForm()
+        public void getPatients()
         {
             using (var db = new HospitalModel())
             {
-                
+                var patientList = db.patient
+                        .SqlQuery("Select * from Patient")
+                        .ToList<Patient>();
             }
+        }
+
+        public void addConsentForm()
+        {
+
         }
 
     }

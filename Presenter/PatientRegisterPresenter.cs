@@ -33,5 +33,9 @@ namespace RadientHospital.Presenter
             PatientDbAccess pda = new PatientDbAccess();
             pda.addPatient(p);
         }
+        //public Patient<List> getPatients()
+        //{
+
+        //}
       }
 }

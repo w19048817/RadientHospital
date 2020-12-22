@@ -13,7 +13,7 @@ namespace RadientHospital.Views
 {
     public partial class PatientGridView : Form
     {
-        private object openFileDialog1;
+        //private object openFileDialog1;
 
         public PatientGridView()
         {
@@ -40,8 +40,8 @@ namespace RadientHospital.Views
 
                 DataGridViewButtonColumn consentform = new DataGridViewButtonColumn();
                 consentform.FlatStyle = FlatStyle.Popup;
-                consentform.HeaderText = "Edit";
-                consentform.Name = "Edit";
+                consentform.HeaderText = "Upload consent";
+                consentform.Name = "Upload consent";
                 consentform.UseColumnTextForButtonValue = true;
                 consentform.Text = "Upload consent";
                 consentform.Width = 100;

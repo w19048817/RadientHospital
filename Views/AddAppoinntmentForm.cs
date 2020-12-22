@@ -10,12 +10,25 @@ using System.Windows.Forms;
 
 namespace RadientHospital.Views
 {
-    public partial class AddAppoinntmentForm : Form
+    public partial class AddAppoinntmentForm : Form,IPatientAppointment
     {
         public AddAppoinntmentForm()
         {
             InitializeComponent();
         }
+       
+        DateTime IPatientAppointment.patient_appt_time
+        {
+            get
+            {
+                return text_patient_appt_date.Value.Date;
+            }
+            set
+            {
+                text_patient_appt_date.Text = text_patient_appt_date.ToString();
+            }
+        }
+       
         public int patientid { get; set; }
         public string patientname { get; set; }
 
