@@ -61,6 +61,7 @@
             this.exesting_patients_btn.TabIndex = 2;
             this.exesting_patients_btn.Text = "Existing Patients";
             this.exesting_patients_btn.UseVisualStyleBackColor = true;
+            this.exesting_patients_btn.Click += new System.EventHandler(this.exesting_patients_btn_Click);
             // 
             // Receptionist
             // 

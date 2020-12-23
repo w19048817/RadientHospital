@@ -28,5 +28,11 @@ namespace RadientHospital.Views
             ParientRegisterForm prp = new ParientRegisterForm();
             prp.Show();
         }
+
+        private void exesting_patients_btn_Click(object sender, EventArgs e)
+        {
+            ExestingPatientsAppt epa = new ExestingPatientsAppt();
+            epa.Show();
+        }
     }
 }

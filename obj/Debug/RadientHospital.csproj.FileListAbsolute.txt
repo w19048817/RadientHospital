@@ -19,3 +19,4 @@ E:\netprojects\RadientHospital\obj\Debug\RadientHospital.Views.PatientGridView.r
 E:\netprojects\RadientHospital\obj\Debug\RadientHospital.Views.AddAppoinntmentForm.resources
 E:\netprojects\RadientHospital\obj\Debug\RadientHospital.csprojAssemblyReference.cache
 E:\netprojects\RadientHospital\obj\Debug\RadientHospital.Views.MedicalQuestionersForm.resources
+E:\netprojects\RadientHospital\obj\Debug\RadientHospital.Views.ExestingPatientsAppt.resources

@@ -9,7 +9,7 @@ namespace RadientHospital.Views
     interface IPatientAppointment
     {
         
-        //string patient_appt_type { get; set; }
+        string patient_appt_type { get; set; }
         DateTime patient_appt_time { get; set; }
     }
 }

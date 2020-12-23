@@ -34,6 +34,8 @@
             this.text_app_patient_id = new System.Windows.Forms.TextBox();
             this.text_app_patient_name = new System.Windows.Forms.TextBox();
             this.text_patient_appt_date = new System.Windows.Forms.DateTimePicker();
+            this.Appointment_type = new System.Windows.Forms.ComboBox();
+            this.lbl_appt_type = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label_app_patientid
@@ -48,7 +50,7 @@
             // label_app_patientname
             // 
             this.label_app_patientname.AutoSize = true;
-            this.label_app_patientname.Location = new System.Drawing.Point(194, 122);
+            this.label_app_patientname.Location = new System.Drawing.Point(195, 122);
             this.label_app_patientname.Name = "label_app_patientname";
             this.label_app_patientname.Size = new System.Drawing.Size(71, 13);
             this.label_app_patientname.TabIndex = 1;
@@ -57,7 +59,7 @@
             // label_app_date
             // 
             this.label_app_date.AutoSize = true;
-            this.label_app_date.Location = new System.Drawing.Point(194, 156);
+            this.label_app_date.Location = new System.Drawing.Point(173, 198);
             this.label_app_date.Name = "label_app_date";
             this.label_app_date.Size = new System.Drawing.Size(92, 13);
             this.label_app_date.TabIndex = 2;
@@ -81,16 +83,38 @@
             // 
             // text_patient_appt_date
             // 
-            this.text_patient_appt_date.Location = new System.Drawing.Point(294, 156);
+            this.text_patient_appt_date.Location = new System.Drawing.Point(294, 198);
             this.text_patient_appt_date.Name = "text_patient_appt_date";
             this.text_patient_appt_date.Size = new System.Drawing.Size(200, 20);
             this.text_patient_appt_date.TabIndex = 5;
+            // 
+            // Appointment_type
+            // 
+            this.Appointment_type.FormattingEnabled = true;
+            this.Appointment_type.Items.AddRange(new object[] {
+            "General",
+            "Emergency"});
+            this.Appointment_type.Location = new System.Drawing.Point(294, 159);
+            this.Appointment_type.Name = "Appointment_type";
+            this.Appointment_type.Size = new System.Drawing.Size(121, 21);
+            this.Appointment_type.TabIndex = 6;
+            // 
+            // lbl_appt_type
+            // 
+            this.lbl_appt_type.AutoSize = true;
+            this.lbl_appt_type.Location = new System.Drawing.Point(173, 159);
+            this.lbl_appt_type.Name = "lbl_appt_type";
+            this.lbl_appt_type.Size = new System.Drawing.Size(93, 13);
+            this.lbl_appt_type.TabIndex = 7;
+            this.lbl_appt_type.Text = "Appointment Type";
             // 
             // AddAppoinntmentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lbl_appt_type);
+            this.Controls.Add(this.Appointment_type);
             this.Controls.Add(this.text_patient_appt_date);
             this.Controls.Add(this.text_app_patient_name);
             this.Controls.Add(this.text_app_patient_id);
@@ -112,5 +136,7 @@
         private System.Windows.Forms.TextBox text_app_patient_id;
         private System.Windows.Forms.TextBox text_app_patient_name;
         private System.Windows.Forms.DateTimePicker text_patient_appt_date;
+        private System.Windows.Forms.ComboBox Appointment_type;
+        private System.Windows.Forms.Label lbl_appt_type;
     }
 }

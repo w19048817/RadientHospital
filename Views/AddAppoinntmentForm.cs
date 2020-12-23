@@ -16,7 +16,17 @@ namespace RadientHospital.Views
         {
             InitializeComponent();
         }
-       
+        string IPatientAppointment.patient_appt_type
+        {
+            get
+            {
+                return Appointment_type.Text;
+            }
+            set
+            {
+                Appointment_type.Text = value;
+            }
+        }
         DateTime IPatientAppointment.patient_appt_time
         {
             get
