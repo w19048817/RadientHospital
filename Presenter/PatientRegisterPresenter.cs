@@ -15,6 +15,10 @@ namespace RadientHospital.Presenter
         {
             RegisterPatientView = view;
         }
+        public PatientRegisterPresenter()
+        {
+           
+        }
         public void addPatient()
         {
             Patient p = new Patient();
@@ -33,9 +37,17 @@ namespace RadientHospital.Presenter
             PatientDbAccess pda = new PatientDbAccess();
             pda.addPatient(p);
         }
-        //public Patient<List> getPatients()
-        //{
-
-        //}
+        public List<Patient> getPatients()
+        {
+            PatientDbAccess pda = new PatientDbAccess();
+            return pda.getPatientsDb();
+        }
+        public Patient getPatientByID(int patientid=1)
+        { 
+            PatientDbAccess pda = new PatientDbAccess();
+            var a = pda.getPatientByIDDB(patientid);
+            Console.WriteLine(a.patiendID);
+            return pda.getPatientByIDDB(patientid);
+        }
       }
 }

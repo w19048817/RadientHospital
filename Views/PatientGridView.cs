@@ -24,9 +24,11 @@ namespace RadientHospital.Views
         {
             // TODO: This line of code loads data into the '_RadientHospital_HospitalModelDataSet.Patients' table. You can move, or remove it, as needed.
             this.patientsTableAdapter.Fill(this._RadientHospital_HospitalModelDataSet.Patients);
-            using (var db = new HospitalModel())
-            {   
-                var row = db.patient.ToList();
+            //using (var db = new HospitalModel())
+            //{   
+            PatientRegisterPresenter prp = new PatientRegisterPresenter();
+            
+                var row = prp.getPatients(); 
                 dataGridView1.AutoGenerateColumns = false;
                 dataGridView1.DataSource = row;
                 DataGridViewButtonColumn editbutton = new DataGridViewButtonColumn();
@@ -46,7 +48,7 @@ namespace RadientHospital.Views
                 consentform.Text = "Upload consent";
                 consentform.Width = 100;
                 dataGridView1.Columns.Add(consentform);
-            }
+            //}
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)

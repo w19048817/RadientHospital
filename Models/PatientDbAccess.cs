@@ -17,13 +17,13 @@ namespace RadientHospital.Models
             }
         }
 
-        public void getPatients()
+        public List<Patient> getPatientsDb()
         {
             using (var db = new HospitalModel())
             {
-                var patientList = db.patient
-                        .SqlQuery("Select * from Patient")
-                        .ToList<Patient>();
+                var patientList = from patient in  db.patient
+                                  select patient;
+                return patientList.ToList();
             }
         }
 
@@ -31,6 +31,15 @@ namespace RadientHospital.Models
         {
 
         }
-
+        public Patient getPatientByIDDB(int patientid)
+        {
+            using (var db = new HospitalModel())
+            {
+                var getpatient = from patient in db.patient
+                              where patient.patiendID == patientid
+                              select patient;
+                return getpatient.First();
+            }
+        }
     }
 }
